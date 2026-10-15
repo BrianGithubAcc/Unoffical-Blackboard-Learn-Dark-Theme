@@ -1,0 +1,39 @@
+name: Visual bug
+description: Report a visual issue with the Blackboard Learn dark theme.
+title: "[Visual Bug]: "
+body:
+  - type: upload
+    id: normal-image
+    attributes:
+      label: Normal Image
+      description: Screenshot of this Blackboard page with the dark theme turned off.
+    validations:
+      required: false
+      accept: ".png,.jpg,.jpeg,.gif,.webp"
+
+  - type: upload
+    id: dark-theme-image
+    attributes:
+      label: Dark Theme Image
+      description: Screenshot of the same page with the dark theme turned on.
+    validations:
+      required: false
+      accept: ".png,.jpg,.jpeg,.gif,.webp"
+
+  - type: textarea
+    id: visual-bug
+    attributes:
+      label: Visual Bug
+      description: Describe what looks wrong and where it appears.
+      placeholder: Include the page or area affected and steps to reproduce the issue.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-design
+    attributes:
+      label: Proposed Design
+      description: Describe how you think it should look. You can attach a mockup if useful.
+      placeholder: Describe the colors, spacing, or appearance you propose.
+    validations:
+      required: false
