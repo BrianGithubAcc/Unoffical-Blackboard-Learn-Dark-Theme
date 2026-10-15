@@ -1,0 +1,428 @@
+html[data-bb-dark-theme="on"] {
+  color-scheme: dark !important;
+  --bb-night-bg: #121820;
+  --bb-night-surface: #1b242d;
+  --bb-night-raised: #222d37;
+  --bb-night-border: #35424d;
+  --bb-night-text: #e7edf2;
+  --bb-night-muted: #a4b0bb;
+  --bb-night-accent: #82dfc5;
+  --bb-night-accent-strong: #a0f0d8;
+  background: var(--bb-night-bg) !important;
+  color: var(--bb-night-text) !important;
+}
+
+html[data-bb-dark-theme="on"] body,
+html[data-bb-dark-theme="on"] #app,
+html[data-bb-dark-theme="on"] #content,
+html[data-bb-dark-theme="on"] #contentPanel,
+html[data-bb-dark-theme="on"] #pageWrapper,
+html[data-bb-dark-theme="on"] #main-content,
+html[data-bb-dark-theme="on"] main,
+html[data-bb-dark-theme="on"] [role="main"] {
+  background-color: var(--bb-night-bg) !important;
+  color: var(--bb-night-text) !important;
+}
+
+html[data-bb-dark-theme="on"] body,
+html[data-bb-dark-theme="on"] body * {
+  border-color: var(--bb-night-border);
+}
+
+html[data-bb-dark-theme="on"] body,
+html[data-bb-dark-theme="on"] body *:not(svg):not(path):not(img):not(video):not(canvas):not(iframe) {
+  color: inherit;
+}
+
+/* Clear unrecognized white surfaces in institution-specific Blackboard views. */
+html[data-bb-dark-theme="on"] body * {
+  background-color: transparent !important;
+  color: var(--bb-night-text) !important;
+}
+
+html[data-bb-dark-theme="on"] body {
+  color: var(--bb-night-text) !important;
+}
+
+html[data-bb-dark-theme="on"] body a,
+html[data-bb-dark-theme="on"] body a:visited {
+  color: var(--bb-night-accent) !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+html[data-bb-dark-theme="on"] body a:hover,
+html[data-bb-dark-theme="on"] body a:focus,
+html[data-bb-dark-theme="on"] body a:focus-visible {
+  color: var(--bb-night-accent-strong) !important;
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Blackboard Ultra navigation and the Original experience's course chrome. */
+html[data-bb-dark-theme="on"] header,
+html[data-bb-dark-theme="on"] nav,
+html[data-bb-dark-theme="on"] [role="navigation"],
+html[data-bb-dark-theme="on"] [role="banner"],
+html[data-bb-dark-theme="on"] #globalNavPageNavArea,
+html[data-bb-dark-theme="on"] #globalNavPageContentArea,
+html[data-bb-dark-theme="on"] #courseMenuPalette,
+html[data-bb-dark-theme="on"] #courseMenuPalette_contents,
+html[data-bb-dark-theme="on"] .base-navigation,
+html[data-bb-dark-theme="on"] [class*="base-navigation"],
+html[data-bb-dark-theme="on"] [class*="course-outline"],
+html[data-bb-dark-theme="on"] [class*="CourseOutline"],
+html[data-bb-dark-theme="on"] [class*="sidebar"],
+html[data-bb-dark-theme="on"] [class*="Sidebar"] {
+  background-color: #182128 !important;
+  color: var(--bb-night-text) !important;
+  border-color: var(--bb-night-border) !important;
+}
+
+html[data-bb-dark-theme="on"] [class*="card"],
+html[data-bb-dark-theme="on"] [class*="Card"],
+html[data-bb-dark-theme="on"] [class*="panel"],
+html[data-bb-dark-theme="on"] [class*="Panel"],
+html[data-bb-dark-theme="on"] [class*="modal"],
+html[data-bb-dark-theme="on"] [class*="Modal"],
+html[data-bb-dark-theme="on"] [class*="drawer"],
+html[data-bb-dark-theme="on"] [class*="Drawer"],
+html[data-bb-dark-theme="on"] [class*="tile"],
+html[data-bb-dark-theme="on"] [class*="Tile"],
+html[data-bb-dark-theme="on"] [class*="activity"],
+html[data-bb-dark-theme="on"] [class*="Activity"],
+html[data-bb-dark-theme="on"] [class*="stream"],
+html[data-bb-dark-theme="on"] [class*="Stream"],
+html[data-bb-dark-theme="on"] [class*="announcement"],
+html[data-bb-dark-theme="on"] [class*="Announcement"],
+html[data-bb-dark-theme="on"] [class*="content-item"],
+html[data-bb-dark-theme="on"] [class*="ContentItem"],
+html[data-bb-dark-theme="on"] [class*="item-content"],
+html[data-bb-dark-theme="on"] [class*="ItemContent"],
+html[data-bb-dark-theme="on"] .contentBox,
+html[data-bb-dark-theme="on"] .portlet {
+  background-color: var(--bb-night-surface) !important;
+  color: var(--bb-night-text) !important;
+  border-color: #2b3740 !important;
+  border-radius: 8px;
+}
+
+html[data-bb-dark-theme="on"] [class*="header"],
+html[data-bb-dark-theme="on"] [class*="Header"],
+html[data-bb-dark-theme="on"] [class*="toolbar"],
+html[data-bb-dark-theme="on"] [class*="Toolbar"],
+html[data-bb-dark-theme="on"] [class*="menu"],
+html[data-bb-dark-theme="on"] [class*="Menu"],
+html[data-bb-dark-theme="on"] [role="menu"],
+html[data-bb-dark-theme="on"] [role="menuitem"] {
+  border-color: var(--bb-night-border) !important;
+}
+
+html[data-bb-dark-theme="on"] button,
+html[data-bb-dark-theme="on"] [role="button"],
+html[data-bb-dark-theme="on"] input,
+html[data-bb-dark-theme="on"] select,
+html[data-bb-dark-theme="on"] textarea,
+html[data-bb-dark-theme="on"] [contenteditable="true"] {
+  background-color: var(--bb-night-raised) !important;
+  color: var(--bb-night-text) !important;
+  border-color: #46545f !important;
+}
+
+html[data-bb-dark-theme="on"] select,
+html[data-bb-dark-theme="on"] option,
+html[data-bb-dark-theme="on"] optgroup,
+html[data-bb-dark-theme="on"] [role="combobox"],
+html[data-bb-dark-theme="on"] [role="listbox"],
+html[data-bb-dark-theme="on"] [role="option"] {
+  background-color: #222d37 !important;
+  color: #e7edf2 !important;
+  border-color: #46545f !important;
+}
+
+html[data-bb-dark-theme="on"] [class*="select"],
+html[data-bb-dark-theme="on"] [class*="Select"],
+html[data-bb-dark-theme="on"] [class*="dropdown"],
+html[data-bb-dark-theme="on"] [class*="Dropdown"] {
+  background-color: #222d37 !important;
+  color: #e7edf2 !important;
+  border-color: #46545f !important;
+}
+
+html[data-bb-dark-theme="on"] body label,
+html[data-bb-dark-theme="on"] body legend,
+html[data-bb-dark-theme="on"] body [class*="label"],
+html[data-bb-dark-theme="on"] body [class*="Label"] {
+  background: transparent !important;
+  background-image: none !important;
+  color: #e7edf2 !important;
+  box-shadow: none !important;
+}
+
+html[data-bb-dark-theme="on"] body label::before,
+html[data-bb-dark-theme="on"] body label::after,
+html[data-bb-dark-theme="on"] body legend::before,
+html[data-bb-dark-theme="on"] body legend::after,
+html[data-bb-dark-theme="on"] body [class*="label"]::before,
+html[data-bb-dark-theme="on"] body [class*="label"]::after,
+html[data-bb-dark-theme="on"] body [class*="Label"]::before,
+html[data-bb-dark-theme="on"] body [class*="Label"]::after {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html[data-bb-dark-theme="on"] h1,
+html[data-bb-dark-theme="on"] h2,
+html[data-bb-dark-theme="on"] h3,
+html[data-bb-dark-theme="on"] h4,
+html[data-bb-dark-theme="on"] h5,
+html[data-bb-dark-theme="on"] h6,
+html[data-bb-dark-theme="on"] [class*="title"],
+html[data-bb-dark-theme="on"] [class*="Title"],
+html[data-bb-dark-theme="on"] body [style*="color"],
+html[data-bb-dark-theme="on"] body [color] {
+  color: #e7edf2 !important;
+}
+
+html[data-bb-dark-theme="on"] body [class*="title"],
+html[data-bb-dark-theme="on"] body [class*="Title"] {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+html[data-bb-dark-theme="on"] body [class*="status"],
+html[data-bb-dark-theme="on"] body [class*="Status"] {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html[data-bb-dark-theme="on"] body [class*="icon"],
+html[data-bb-dark-theme="on"] body [class*="Icon"],
+html[data-bb-dark-theme="on"] body [class*="bullet"],
+html[data-bb-dark-theme="on"] body [class*="Bullet"],
+html[data-bb-dark-theme="on"] body [class*="marker"],
+html[data-bb-dark-theme="on"] body [class*="Marker"] {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html[data-bb-dark-theme="on"] body [class*="icon"]::before,
+html[data-bb-dark-theme="on"] body [class*="icon"]::after,
+html[data-bb-dark-theme="on"] body [class*="Icon"]::before,
+html[data-bb-dark-theme="on"] body [class*="Icon"]::after,
+html[data-bb-dark-theme="on"] body [class*="bullet"]::before,
+html[data-bb-dark-theme="on"] body [class*="bullet"]::after,
+html[data-bb-dark-theme="on"] body [class*="marker"]::before,
+html[data-bb-dark-theme="on"] body [class*="marker"]::after {
+  background: transparent !important;
+  background-image: none !important;
+  box-shadow: none !important;
+}
+
+html[data-bb-dark-theme="on"] option:checked,
+html[data-bb-dark-theme="on"] [role="option"][aria-selected="true"] {
+  background-color: #31584f !important;
+  color: #ffffff !important;
+}
+
+html[data-bb-dark-theme="on"] button:hover,
+html[data-bb-dark-theme="on"] [role="button"]:hover,
+html[data-bb-dark-theme="on"] [role="menuitem"]:hover {
+  background-color: var(--bb-night-surface) !important;
+}
+
+html[data-bb-dark-theme="on"] button,
+html[data-bb-dark-theme="on"] [role="button"] {
+  background: transparent !important;
+  background-image: none !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+html[data-bb-dark-theme="on"] body tr:hover,
+html[data-bb-dark-theme="on"] body [role="row"]:hover,
+html[data-bb-dark-theme="on"] body [role="option"]:hover,
+html[data-bb-dark-theme="on"] body [role="menuitem"]:hover,
+html[data-bb-dark-theme="on"] body li[class*="item"]:hover,
+html[data-bb-dark-theme="on"] body li[class*="Item"]:hover,
+html[data-bb-dark-theme="on"] body div[class*="item"]:hover,
+html[data-bb-dark-theme="on"] body div[class*="Item"]:hover,
+html[data-bb-dark-theme="on"] body [class*="row"]:hover,
+html[data-bb-dark-theme="on"] body [class*="Row"]:hover,
+html[data-bb-dark-theme="on"] body [class*="card"]:hover,
+html[data-bb-dark-theme="on"] body [class*="Card"]:hover,
+html[data-bb-dark-theme="on"] body [class*="activity"]:hover,
+html[data-bb-dark-theme="on"] body [class*="Activity"]:hover,
+html[data-bb-dark-theme="on"] body [class*="stream"]:hover,
+html[data-bb-dark-theme="on"] body [class*="Stream"]:hover {
+  background-color: #1b242d !important;
+  color: #f0f4f7 !important;
+  border-color: #46545f !important;
+  box-shadow: none !important;
+}
+
+html[data-bb-dark-theme="on"] input::placeholder,
+html[data-bb-dark-theme="on"] textarea::placeholder {
+  color: #9caab4 !important;
+  opacity: 1;
+}
+
+html[data-bb-dark-theme="on"] input[type="checkbox"],
+html[data-bb-dark-theme="on"] input[type="radio"] {
+  accent-color: #52bfa4;
+}
+
+html[data-bb-dark-theme="on"] table,
+html[data-bb-dark-theme="on"] caption,
+html[data-bb-dark-theme="on"] tbody,
+html[data-bb-dark-theme="on"] tfoot,
+html[data-bb-dark-theme="on"] tr,
+html[data-bb-dark-theme="on"] th,
+html[data-bb-dark-theme="on"] td,
+html[data-bb-dark-theme="on"] [role="table"],
+html[data-bb-dark-theme="on"] [role="rowgroup"],
+html[data-bb-dark-theme="on"] [role="grid"],
+html[data-bb-dark-theme="on"] [role="row"],
+html[data-bb-dark-theme="on"] [role="cell"],
+html[data-bb-dark-theme="on"] [role="gridcell"],
+html[data-bb-dark-theme="on"] [role="columnheader"] {
+  background-color: #1b242d !important;
+  color: #e7edf2 !important;
+  border-color: var(--bb-night-border) !important;
+  box-shadow: none !important;
+}
+
+html[data-bb-dark-theme="on"] .table,
+html[data-bb-dark-theme="on"] [class*="table"],
+html[data-bb-dark-theme="on"] [class*="Table"] {
+  background-color: #1b242d !important;
+  color: #e7edf2 !important;
+}
+
+html[data-bb-dark-theme="on"] th,
+html[data-bb-dark-theme="on"] thead,
+html[data-bb-dark-theme="on"] [role="rowheader"],
+html[data-bb-dark-theme="on"] [role="columnheader"] {
+  background-color: #222e37 !important;
+  color: #e7edf2 !important;
+}
+
+html[data-bb-dark-theme="on"] tr:nth-child(even),
+html[data-bb-dark-theme="on"] [role="row"]:nth-child(even),
+html[data-bb-dark-theme="on"] tr:nth-child(even) td {
+  background-color: #202a33 !important;
+}
+
+html[data-bb-dark-theme="on"] img[src*="panopto" i],
+html[data-bb-dark-theme="on"] img[alt*="lecture recording" i],
+html[data-bb-dark-theme="on"] img[title*="lecture recording" i],
+html[data-bb-dark-theme="on"] img[class*="record" i],
+html[data-bb-dark-theme="on"] img[src*="lecture-recording" i],
+html[data-bb-dark-theme="on"] img[src*="recording" i],
+html[data-bb-dark-theme="on"] img[data-bb-dark-logo="on"] {
+  filter: invert(1) hue-rotate(180deg) brightness(1.2) !important;
+  mix-blend-mode: screen;
+}
+
+html[data-bb-dark-theme="on"] [class*="empty"],
+html[data-bb-dark-theme="on"] [class*="Empty"],
+html[data-bb-dark-theme="on"] [class*="no-grade"],
+html[data-bb-dark-theme="on"] [class*="NoGrade"] {
+  background-color: #1b242d !important;
+  color: var(--bb-night-text) !important;
+}
+
+/* Tint the wrapper so the empty banner's original Blackboard artwork remains visible. */
+html[data-bb-dark-theme="on"] body [class*="courseBannerWrapper"] {
+  position: relative !important;
+  z-index: 0 !important;
+  isolation: isolate !important;
+  box-shadow: inset 0 3px 0 var(--bb-course-banner-color, #4b7ca8) !important;
+}
+
+/* Keep the course tabs above the banner artwork and its tint overlay. */
+html[data-bb-dark-theme="on"] body [role="tablist"],
+html[data-bb-dark-theme="on"] body [class*="MuiTabs-root"],
+html[data-bb-dark-theme="on"] body [class*="courseNavigation"],
+html[data-bb-dark-theme="on"] body [class*="course-navigation"],
+html[data-bb-dark-theme="on"] body [class*="courseTabs"],
+html[data-bb-dark-theme="on"] body [class*="course-tabs"] {
+  position: sticky !important;
+  top: 0 !important;
+  z-index: 1000 !important;
+  background-color: #182128 !important;
+}
+
+html[data-bb-dark-theme="on"] body [role="tablist"]::before,
+html[data-bb-dark-theme="on"] body [class*="MuiTabs-root"]::before,
+html[data-bb-dark-theme="on"] body [class*="courseNavigation"]::before,
+html[data-bb-dark-theme="on"] body [class*="course-navigation"]::before,
+html[data-bb-dark-theme="on"] body [class*="courseTabs"]::before,
+html[data-bb-dark-theme="on"] body [class*="course-tabs"]::before {
+  content: "" !important;
+  position: absolute !important;
+  z-index: -1 !important;
+  inset: 0 auto 0 0 !important;
+  width: 100vw !important;
+  background-color: #182128 !important;
+  pointer-events: none !important;
+}
+
+html[data-bb-dark-theme="on"] body [class*="courseBannerWrapper"] > [class*="emptyCourseBanner"] {
+  position: relative !important;
+  z-index: 0 !important;
+  background-color: transparent !important;
+}
+
+html[data-bb-dark-theme="on"] body [class*="courseBannerWrapper"]::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+  background: linear-gradient(115deg, var(--bb-course-banner-tint, rgba(75, 124, 168, .82)) 0%, var(--bb-course-banner-shade-tint, rgba(36, 59, 80, .78)) 100%) !important;
+  mix-blend-mode: color !important;
+}
+
+html[data-bb-dark-theme="on"] body [class*="courseBannerWrapper"]:hover {
+  background-color: transparent !important;
+  box-shadow: inset 0 3px 0 var(--bb-course-banner-color, #4b7ca8) !important;
+}
+
+html[data-bb-dark-theme="on"] body [class*="emptyCourseBanner"]:hover {
+  background-color: transparent !important;
+}
+
+html[data-bb-dark-theme="on"] body [class*="courseTitle"],
+html[data-bb-dark-theme="on"] body [class*="course-title"],
+html[data-bb-dark-theme="on"] body [class*="titleContainer"]:hover,
+html[data-bb-dark-theme="on"] body [class*="title-container"]:hover {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+html[data-bb-dark-theme="on"] blockquote,
+html[data-bb-dark-theme="on"] pre,
+html[data-bb-dark-theme="on"] code,
+html[data-bb-dark-theme="on"] .contentBox,
+html[data-bb-dark-theme="on"] .vtbegenerated {
+  background-color: var(--bb-night-surface) !important;
+  color: var(--bb-night-text) !important;
+}
+
+html[data-bb-dark-theme="on"] ::selection {
+  background: rgba(89, 203, 174, .34) !important;
+  color: #fff !important;
+}
+
+html[data-bb-dark-theme="on"] :focus-visible {
+  outline-color: #82dfc5 !important;
+}
+
+html[data-bb-dark-theme="on"] ::-webkit-scrollbar { width: 12px; height: 12px; }
+html[data-bb-dark-theme="on"] ::-webkit-scrollbar-track { background: #151c22; }
+html[data-bb-dark-theme="on"] ::-webkit-scrollbar-thumb { border: 3px solid #151c22; border-radius: 99px; background: #46545e; }
+html[data-bb-dark-theme="on"] ::-webkit-scrollbar-thumb:hover { background: #5b6b75; }

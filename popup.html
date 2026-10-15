@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blackboard Dark Theme</title>
+    <link rel="stylesheet" href="popup.css">
+    <script src="popup.js" defer></script>
+  </head>
+  <body>
+    <main class="popup">
+      <header class="header">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none">
+            <path d="M20.2 15.2A8.8 8.8 0 0 1 8.8 3.8 8.9 8.9 0 1 0 20.2 15.2Z" />
+            <path d="m16.5 4 .5 1.5 1.5.5-1.5.5-.5 1.5-.5-1.5-1.5-.5 1.5-.5.5-1.5Z" />
+          </svg>
+        </div>
+        <div>
+          <p class="eyebrow">BLACKBOARD LEARN</p>
+          <h1>Night mode</h1>
+        </div>
+        <span class="status-dot" id="status-dot" aria-hidden="true"></span>
+      </header>
+
+      <section class="theme-card" aria-live="polite">
+        <div class="theme-preview" aria-hidden="true">
+          <span class="preview-sidebar"></span>
+          <span class="preview-page">
+            <i></i><i></i><i></i>
+            <b></b>
+          </span>
+        </div>
+        <div class="theme-copy">
+          <p class="state" id="state">Checking this tab…</p>
+          <p class="hint" id="hint">Theme applies only to the current tab.</p>
+        </div>
+        <button id="toggle" class="toggle" type="button" aria-label="Toggle dark theme" aria-pressed="false">
+          <span class="toggle-thumb"></span>
+        </button>
+      </section>
+
+      <section class="banner-setting" aria-label="Course banner color">
+        <div>
+          <h2>Course banner</h2>
+          <p>Pick a color for the gradient and accent line.</p>
+        </div>
+        <div class="banner-swatches" id="banner-swatches" role="group" aria-label="Course banner colors">
+          <button class="banner-swatch" type="button" data-color="#4b7ca8" aria-label="Blue" title="Blue"></button>
+          <button class="banner-swatch" type="button" data-color="#398c8c" aria-label="Teal" title="Teal"></button>
+          <button class="banner-swatch" type="button" data-color="#4d8b68" aria-label="Green" title="Green"></button>
+          <button class="banner-swatch" type="button" data-color="#735fa6" aria-label="Purple" title="Purple"></button>
+          <button class="banner-swatch" type="button" data-color="#a25285" aria-label="Violet" title="Violet"></button>
+          <button class="banner-swatch" type="button" data-color="#d94559" aria-label="Red" title="Red"></button>
+          <button class="banner-swatch" type="button" data-color="#ab793c" aria-label="Amber" title="Amber"></button>
+          <button class="banner-swatch" type="button" data-color="#71808c" aria-label="Slate" title="Slate"></button>
+        </div>
+      </section>
+
+      <p class="message" id="message" role="status"></p>
+
+      <footer class="footer">
+        <span class="footer-icon" aria-hidden="true">✦</span>
+        <span>Easy on the eyes. Your school’s content stays untouched.</span>
+      </footer>
+    </main>
+  </body>
+</html>

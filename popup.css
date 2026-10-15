@@ -1,0 +1,97 @@
+:root {
+  color-scheme: dark;
+  font-family: "DM Sans", "Segoe UI", sans-serif;
+  background: #11151b;
+  color: #f0f3f7;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 320px;
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 2% 0%, rgba(93, 215, 189, .12), transparent 48%),
+    #11151b;
+}
+
+.popup { padding: 19px 18px 14px; }
+.header { display: flex; align-items: center; gap: 11px; margin-bottom: 19px; }
+.brand-mark {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid rgba(124, 226, 201, .2);
+  border-radius: 12px;
+  background: linear-gradient(145deg, #203d3a, #172b2c);
+  box-shadow: 0 4px 16px rgba(41, 176, 150, .1);
+}
+.brand-mark svg { width: 22px; stroke: #83e1c8; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.5; }
+.eyebrow { margin: 0 0 2px; color: #83e1c8; font-size: 9px; font-weight: 700; letter-spacing: .15em; }
+h1 { margin: 0; font-family: "Space Grotesk", "Segoe UI", sans-serif; font-size: 18px; font-weight: 600; letter-spacing: -.035em; }
+.status-dot { width: 7px; height: 7px; margin-left: auto; border-radius: 50%; background: #66717c; box-shadow: 0 0 0 4px rgba(102, 113, 124, .12); }
+.status-dot.is-on { background: #83e1c8; box-shadow: 0 0 0 4px rgba(131, 225, 200, .13), 0 0 12px rgba(131, 225, 200, .65); }
+
+.theme-card {
+  display: grid;
+  grid-template-columns: 55px 1fr 42px;
+  align-items: center;
+  gap: 11px;
+  min-height: 84px;
+  padding: 12px;
+  border: 1px solid #303941;
+  border-radius: 14px;
+  background: linear-gradient(120deg, #1b2229, #1b2427);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, .15);
+}
+.theme-preview { display: flex; width: 55px; height: 54px; overflow: hidden; border: 1px solid #47555c; border-radius: 8px; background: #11161c; }
+.preview-sidebar { width: 13px; background: #1d292b; border-right: 1px solid #354344; }
+.preview-page { display: flex; flex: 1; flex-direction: column; gap: 5px; padding: 8px 6px; }
+.preview-page i, .preview-page b { display: block; height: 3px; border-radius: 3px; background: #45515a; }
+.preview-page i:first-child { width: 20px; background: #82d8c0; }
+.preview-page i:nth-child(2) { width: 28px; }
+.preview-page i:nth-child(3) { width: 23px; }
+.preview-page b { height: 12px; margin-top: 1px; background: #263438; border: 1px solid #425452; }
+.theme-copy { min-width: 0; }
+.state { margin: 0 0 4px; font-size: 13px; font-weight: 700; letter-spacing: -.01em; }
+.hint { margin: 0; color: #9ca7b2; font-size: 10px; line-height: 1.4; }
+
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 24px;
+  padding: 0;
+  border: 1px solid #48535d;
+  border-radius: 99px;
+  background: #353e47;
+  cursor: pointer;
+  transition: background .18s ease, border-color .18s ease, opacity .18s ease;
+}
+.toggle-thumb { position: absolute; top: 3px; left: 3px; width: 16px; height: 16px; border-radius: 50%; background: #dfe5e9; box-shadow: 0 1px 4px rgba(0, 0, 0, .35); transition: transform .18s ease; }
+.toggle[aria-pressed="true"] { border-color: #65cdb2; background: #2b9e87; }
+.toggle[aria-pressed="true"] .toggle-thumb { transform: translateX(16px); background: #fff; }
+.toggle:focus-visible { outline: 2px solid #a0ead7; outline-offset: 3px; }
+.toggle:disabled { cursor: wait; opacity: .6; }
+
+.banner-setting {
+  display: block;
+  margin-top: 12px;
+  padding: 11px 12px;
+  border: 1px solid #303941;
+  border-radius: 12px;
+  background: #1b2229;
+}
+.banner-setting h2 { margin: 0; font-size: 12px; font-weight: 700; }
+.banner-setting p { margin: 3px 0 0; color: #9ca7b2; font-size: 10px; line-height: 1.35; }
+.banner-swatches { display: flex; justify-content: space-between; gap: 7px; margin-top: 11px; }
+.banner-swatch { width: 24px; height: 24px; flex: 0 0 24px; padding: 0; border: 2px solid #1b2229; border-radius: 50%; background: var(--swatch-color); cursor: pointer; }
+.banner-swatch[aria-pressed="true"] { border-color: #e7edf2; box-shadow: 0 0 0 1px var(--swatch-color); }
+.banner-swatch:focus-visible { outline: 2px solid #a0ead7; outline-offset: 2px; }
+
+.message { min-height: 16px; margin: 9px 2px 1px; color: #ffb9a8; font-size: 10px; line-height: 1.45; }
+.message:empty { min-height: 0; margin-top: 0; }
+.footer { display: flex; align-items: center; gap: 7px; padding: 11px 1px 0; border-top: 1px solid #293139; color: #82909c; font-size: 9px; }
+.footer-icon { color: #83e1c8; font-size: 12px; }
