@@ -1,9 +1,13 @@
 {
   "manifest_version": 3,
   "name": "Blackboard Learn Dark Theme",
-  "version": "1.0.0",
-  "description": "A comfortable dark theme for Blackboard Learn, enabled per tab.",
+  "version": "1.1.0",
+  "description": "A comfortable dark theme for Blackboard Learn that stays enabled on sites you choose.",
   "permissions": ["activeTab", "scripting", "storage"],
+  "optional_host_permissions": ["*://*/*"],
+  "background": {
+    "scripts": ["page-theme.js", "background.js"]
+  },
   "action": {
     "default_title": "Toggle Blackboard dark theme",
     "default_popup": "popup.html",
@@ -16,10 +20,13 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "blackboard-learn-dark-theme@briangithubacc.github.io",
-      "strict_min_version": "109.0",
+      "strict_min_version": "140.0",
       "data_collection_permissions": {
         "required": ["none"]
       }
+    },
+    "gecko_android": {
+      "strict_min_version": "142.0"
     }
   }
 }

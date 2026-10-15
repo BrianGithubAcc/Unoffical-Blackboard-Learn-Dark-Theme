@@ -2,11 +2,13 @@
 
 A lightweight Firefox add-on that recolors Blackboard Learn's Ultra and Original interfaces with a deep slate background, soft teal accents, readable text, and dark form controls.
 
-## How does it work
-The addon mostly just forces an overwrite of the exsiting css properties to force a dark theme.
-## Bugs,Features and Contribution
-For any visual bugs please see the issue template if you have a bug that is not visual please open an issue, for feature suggestion please just open an issue.PRs are welcomed.
- reword
+## How It Works
+
+The add-on applies a dark theme by overriding Blackboard Learn's existing CSS styles. When enabled, it stays on as you navigate and reload pages on that site. Firefox asks for access to the current site the first time you enable it.
+
+## Bugs, Features, and Contributions
+
+For visual bugs, please use the **Visual Bug** issue template. For other bugs or feature suggestions, open an issue. Pull requests are welcome.
  
 ## Build The Addon
 
