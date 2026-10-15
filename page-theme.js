@@ -7,6 +7,7 @@ function setPageTheme(shouldEnable, color, tint, shadeTint) {
   if (!shouldEnable) {
     existing?.observer?.disconnect();
     if (existing?.scheduledFrame) cancelAnimationFrame(existing.scheduledFrame);
+    if (existing?.initialScanTimer) clearTimeout(existing.initialScanTimer);
     for (const [element, [originalColor, originalPriority]] of existing?.colors ?? []) {
       if (!element.isConnected) continue;
       if (originalColor) element.style.setProperty("color", originalColor, originalPriority);
@@ -29,10 +30,12 @@ function setPageTheme(shouldEnable, color, tint, shadeTint) {
   document.documentElement.style.setProperty("--bb-course-banner-shade-tint", shadeTint);
   existing?.observer?.disconnect();
   if (existing?.scheduledFrame) cancelAnimationFrame(existing.scheduledFrame);
+  if (existing?.initialScanTimer) clearTimeout(existing.initialScanTimer);
   const state = {
     colors: existing?.colors ?? new Map(),
     observer: null,
     scheduledFrame: 0,
+    initialScanTimer: 0,
     pendingRoots: new Set(),
     pendingHeadings: new Set(),
     pendingRemoved: new Set()
@@ -153,12 +156,6 @@ function setPageTheme(shouldEnable, color, tint, shadeTint) {
     });
   };
 
-  const initialHeadings = new Set();
-  const initialImages = new Set();
-  collectCandidates(document.body ?? document.documentElement, initialHeadings, initialImages);
-  processHeadings(initialHeadings);
-  processImages(initialImages);
-
   state.observer = new MutationObserver((records) => {
     for (const record of records) {
       if (record.type === "characterData") {
@@ -184,4 +181,12 @@ function setPageTheme(shouldEnable, color, tint, shadeTint) {
   });
   state.observer.observe(document.documentElement, { subtree: true, childList: true, characterData: true });
   window[stateKey] = state;
+
+  // Let the base theme paint first; heading and logo refinements can follow.
+  state.initialScanTimer = window.setTimeout(() => {
+    state.initialScanTimer = 0;
+    if (document.documentElement.dataset.bbDarkTheme !== "on") return;
+    queueRoot(document.body ?? document.documentElement);
+    scheduleWork();
+  }, 0);
 }

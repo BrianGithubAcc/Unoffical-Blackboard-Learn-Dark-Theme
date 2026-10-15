@@ -75,6 +75,10 @@ async function applyThemeToTab(tabId, courseBannerColor = bannerColor) {
   await updatePageEnhancements(tabId, true, courseBannerColor);
 }
 
+async function updatePersistentSiteScript(type) {
+  return browser.runtime.sendMessage({ type, origin: activeOrigin });
+}
+
 async function initialize() {
   try {
     const saved = await browser.storage.local.get({ bannerColor: defaultBannerColor });
@@ -99,6 +103,7 @@ async function initialize() {
     const saved = await browser.storage.local.get({ enabledOrigins: [] });
     const savedForSite = saved.enabledOrigins.includes(activeOrigin);
     const hasSitePermission = savedForSite && await browser.permissions.contains({ origins: [activeOriginPattern] });
+    if (hasSitePermission) await updatePersistentSiteScript("register-theme-site");
     const enabled = hasSitePermission || await readState(activeTabId);
     setEnabled(enabled);
     if (hasSitePermission && !(await readState(activeTabId))) {
@@ -127,6 +132,7 @@ toggleButton.addEventListener("click", async () => {
       await browser.storage.local.set({
         enabledOrigins: saved.enabledOrigins.filter((origin) => origin !== activeOrigin)
       });
+      await updatePersistentSiteScript("unregister-theme-site").catch(() => {});
       await updatePageEnhancements(activeTabId, false);
       await browser.scripting.removeCSS({
         target: { tabId: activeTabId },
@@ -139,11 +145,13 @@ toggleButton.addEventListener("click", async () => {
         message.textContent = "Allow access to this site so the theme can stay on after you navigate.";
         return;
       }
-      await applyThemeToTab(activeTabId, bannerColor);
       const saved = await browser.storage.local.get({ enabledOrigins: [] });
       await browser.storage.local.set({
         enabledOrigins: [...new Set([...saved.enabledOrigins, activeOrigin])]
       });
+      const registered = await updatePersistentSiteScript("register-theme-site");
+      if (!registered) throw new Error("Could not register the site theme script.");
+      await applyThemeToTab(activeTabId, bannerColor);
       setEnabled(true);
     }
   } catch {

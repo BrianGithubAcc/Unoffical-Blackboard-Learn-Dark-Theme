@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Blackboard Learn Dark Theme",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "A comfortable dark theme for Blackboard Learn that stays enabled on sites you choose.",
   "permissions": ["activeTab", "scripting", "storage"],
   "optional_host_permissions": ["*://*/*"],
